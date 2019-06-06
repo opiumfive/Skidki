@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#f9f9f9"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#fff"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ToolbarStyle"
+                    app:titleTextAppearance="@style/Toolbar.TitleText">
+
+                <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="28dp"
+                        android:src="@drawable/back"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="4dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_height="32dp"/>
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Регистрация"
+                            android:textColor="#222"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:overScrollMode="never"
+                android:fillViewport="true"
+                android:layout_height="match_parent" >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:textColor="#8e8e93"
+                        android:textSize="16sp"
+                        android:layout_marginTop="16dp"
+                        android:text="Регистрируясь, вы соглашаетесь с Условиями пользовательского соглашения и Политикой конфиденциальности"
+                        android:layout_height="wrap_content"/>
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/emailText"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="32dp"
+                        android:paddingTop="5dp"
+                        android:background="@drawable/edit_bg"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true">
+
+                    <android.support.design.widget.TextInputEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="16dp"
+                            android:hint="Email" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/passText"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:paddingTop="5dp"
+                        android:background="@drawable/edit_bg"
+                        android:layout_height="wrap_content"
+                        app:passwordToggleEnabled="false"
+                        app:errorEnabled="true">
+
+                    <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="16dp"
+                            android:inputType="textPassword"
+                            android:hint="Пароль" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/rpassText"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:paddingTop="5dp"
+                        android:background="@drawable/edit_bg"
+                        android:layout_height="wrap_content"
+                        app:passwordToggleEnabled="false"
+                        app:errorEnabled="true">
+
+                    <android.support.design.widget.TextInputEditText
+                            android:id="@+id/rpass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="16dp"
+                            android:inputType="textPassword"
+                            android:hint="Повторите пароль" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                        android:id="@+id/reg"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/purple_bg"
+                        android:text="Регистрация"
+                        android:textAllCaps="true"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textStyle="normal"
+                        android:layout_marginTop="24dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
+

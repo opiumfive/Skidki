@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#fff"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ToolbarStyle"
+                    app:titleTextAppearance="@style/Toolbar.TitleText">
+
+                <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="28dp"
+                        android:src="@drawable/back"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="4dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_height="32dp"/>
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/name2"
+                                android:layout_width="0dp"
+                                android:text=""
+                                android:textColor="#222"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"/>
+
+                        <ImageView
+                                android:id="@+id/cart"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:src="@drawable/cart_icon" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/imagesPager"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="270dp"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/viewPagerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:textColor="#222"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/cat"
+                android:layout_width="match_parent"
+                android:textColor="#999"
+                android:textSize="12sp"
+                android:layout_marginLeft="16dp"
+                android:visibility="gone"
+                android:layout_marginRight="16dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:id="@+id/retailImg"
+                android:layout_width="84dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/discount"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/purple"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/expires"
+                android:layout_width="match_parent"
+                android:textColor="#999"
+                android:textSize="12sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_height="wrap_content">
+
+            <Button
+                    android:id="@+id/fastCoupon"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/orange_bg"
+                    android:text="Быстрый купон"
+                    android:textAllCaps="true"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"/>
+
+            <Button
+                    android:id="@+id/toCart"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/purple_bg"
+                    android:text="В корзину"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

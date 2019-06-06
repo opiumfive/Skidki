@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iterika.marvel.utils.ShadowLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:sl_dy="4dp"
+        app:sl_shadowColor="#1f000000"
+        app:sl_shadowRadius="8dp"
+        app:sl_cornerRadius="8dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:id="@+id/container"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="120dp"
+            android:gravity="center"
+            android:background="@drawable/category_bg"
+            android:layout_height="120dp">
+
+        <ImageView
+                android:id="@+id/image"
+                android:layout_width="48dp"
+                android:visibility="gone"
+                android:layout_height="48dp"/>
+
+        <TextView
+                android:id="@+id/text"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxLines="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</com.iterika.marvel.utils.ShadowLayout>

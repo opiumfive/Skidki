@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_height="48dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:textColor="#222"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:clickable="false"
+            android:layout_gravity="right|center_vertical"
+            app:buttonTint="@color/purple"
+            android:layout_height="wrap_content"/>
+
+</FrameLayout>

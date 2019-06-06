@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textColor="#222"
+            android:text="Добавить в корзину"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:textColor="#999"
+            android:text="Укажите количество товара"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:foreground="@drawable/image_border"
+            android:layout_height="128dp" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_height="wrap_content">
+        
+        <ImageView
+                android:id="@+id/minus"
+                android:layout_width="36dp"
+                android:src="@drawable/minus"
+                android:padding="3dp"
+                android:background="@drawable/plus_bg"
+                android:layout_height="36dp"/>
+
+        <TextView
+                android:id="@+id/count"
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="1 шт."
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:id="@+id/plus"
+                android:layout_width="36dp"
+                android:src="@drawable/plus"
+                android:padding="3dp"
+                android:background="@drawable/plus_bg"
+                android:layout_height="36dp"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:textColor="#222"
+            android:textSize="12sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:singleLine="true"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/discount"
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/purple"
+            android:textSize="16sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:singleLine="true"
+            android:layout_height="wrap_content"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:background="#1e000000"
+            android:layout_marginTop="16dp"
+            android:layout_height="1dp" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right|center_vertical"
+            android:paddingRight="12dp"
+            android:layout_height="52dp">
+
+        <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="#555"
+                android:textAllCaps="true"
+                android:text="Отмена"
+                android:padding="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="@color/purple"
+                android:textAllCaps="true"
+                android:padding="4dp"
+                android:text="Добавить"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

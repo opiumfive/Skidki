@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#fff"
+                android:focusable="true"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:focusableInTouchMode="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ToolbarStyle"
+                app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <FrameLayout
+                        android:id="@+id/usualView"
+                        android:layout_width="match_parent"
+                        android:visibility="visible"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Каталог"
+                            android:textColor="#222"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:id="@+id/filter"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/filter_icon" />
+
+                        <ImageView
+                                android:id="@+id/search"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:src="@drawable/search_icon" />
+
+                       <LinearLayout
+                               android:id="@+id/cart"
+                               android:layout_width="wrap_content"
+                               android:orientation="horizontal"
+                               android:layout_height="wrap_content">
+
+                           <ImageView
+
+                                   android:layout_width="24dp"
+                                   android:layout_height="24dp"
+                                   android:layout_marginRight="4dp"
+                                   android:src="@drawable/cart_icon" />
+
+                           <TextView
+                                   android:id="@+id/cartSum"
+                                   android:layout_width="wrap_content"
+                                   android:text="0 ₽"
+                                   android:textColor="@color/purple"
+                                   android:textSize="14sp"
+                                   android:textAllCaps="true"
+                                   android:padding="4dp"
+                                   android:layout_marginRight="12dp"
+                                   android:layout_gravity="center_vertical|right"
+                                   android:layout_height="wrap_content"/>
+                       </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                        android:id="@+id/searchView"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+                            android:id="@+id/backSearch"
+                            android:layout_width="28dp"
+                            android:src="@drawable/back"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="4dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_height="32dp"/>
+                    
+                    <EditText
+                            android:id="@+id/searchQuery"
+                            android:layout_width="match_parent"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:imeOptions="actionDone"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/pullRefresh"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="#f9f9f9"
+
+                    android:animateLayoutChanges="true"
+                    android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/categoriesRecycler"
+                        android:layout_width="match_parent"
+                        android:background="#0f000000"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:layout_height="152dp"/>
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                            android:id="@+id/productsRecycler"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:nestedScrollingEnabled="false"
+                            android:clipToPadding="false"
+                            android:overScrollMode="never"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:id="@+id/nothing"
+                            android:layout_width="match_parent"
+                            android:text="Ничего не найдено"
+                            android:visibility="gone"
+                            android:textSize="16sp"
+                            android:textColor="#8e8e93"
+                            android:textAlignment="center"
+                            android:layout_marginTop="32dp"
+                            android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <ProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:visibility="invisible"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.design.widget.CoordinatorLayout>

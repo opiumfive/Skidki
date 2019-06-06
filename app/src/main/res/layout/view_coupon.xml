@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="#999"
+            android:textSize="10sp"
+            android:textAllCaps="true"
+            android:background="#f9f9f9"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <com.iterika.marvel.utils.ShadowLayout
+                    android:layout_width="match_parent"
+                    app:sl_shadowColor="#1e000000"
+                    app:sl_dy="2dp"
+                    app:sl_shadowRadius="4dp"
+                    app:sl_cornerRadius="4dp"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/coupon_image_bg"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:id="@+id/magnolia"
+                            android:layout_below="@id/image"
+                            android:src="@drawable/magnolia"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <ImageView
+                            android:id="@+id/image"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:src="@drawable/barcode"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"/>
+
+                    <Button
+                            android:id="@+id/discount"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/coupon_purple_bg"
+                            android:textAllCaps="false"
+                            android:textSize="13sp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@android:color/white"
+                            android:layout_height="24dp"/>
+
+                </LinearLayout>
+
+            </com.iterika.marvel.utils.ShadowLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#222"
+                    android:maxLines="3"
+                    android:textSize="16sp"/>
+
+            <TextView
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999"
+                    android:singleLine="true"
+                    android:textSize="12sp" android:visibility="invisible"/>
+
+            <TextView
+                    android:id="@+id/dateTill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#f37f20"
+                    android:singleLine="true"
+                    android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:alpha="0.12"
+            android:layout_height="1dp" />
+
+</LinearLayout>

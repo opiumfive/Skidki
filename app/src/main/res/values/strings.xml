@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Скидки мне</string>
+    <string name="your_discount">Ваша\nэкономия</string>
+    <string name="coupons_emp">Список пуст.\n\nДоступно только для зарегистрированных пользователей</string>
+</resources>
